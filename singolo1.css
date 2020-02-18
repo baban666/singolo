@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.wrapper {
+    width: 1020px;
+    margin: 0 auto;
+}
+
+
+.header {
+    background-color: rgb(45, 48, 58);
+    height: 89px;
+
+}
+
+.header .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    vertical-align: baseline;
+}
+
+.navigation li{
+    list-style: none;
+    font-weight: bold;
+}
+
+.logo{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: left;
+}
+
+.nav-bar{
+
+}
+
+.logo span{
+    color: rgb(240, 108, 100);
+}
+
+.slider{
+    background-color: rgb(240, 108, 100);
+    height: 600px;
+}
+
+
