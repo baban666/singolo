@@ -90,12 +90,14 @@ body {
     color: #dfdfe0;
     text-decoration: none;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .navigation a:hover {
     color: rgb(240, 108, 100);
-    transition: 700ms;
+    transition-duration: 700ms;
     transition-property: color;
+    cursor: pointer;
 }
 
 .navigation .active a {
@@ -117,6 +119,12 @@ body {
     position: absolute;
     left: 0;
     top: 50%;
+}
+.hero-navigation .prev:hover, .hero-navigation .next:hover{
+    opacity: 0.5;
+    transition-duration: 700ms;
+    transition-property: opacity;
+    cursor: pointer;
 }
 
 .hero-navigation .next{
