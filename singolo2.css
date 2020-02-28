@@ -62,10 +62,21 @@ body {
     font-size: 12px;
     color: rgb(118, 126, 158);
     border: 1px solid rgb(102, 109, 137);
-    border-radius: 3px;
+    border-radius: 6px;
     margin-right: 10px;
-    padding: 3px 6px;
+    padding: 3px 7px;
     min-width: 14px;
+    letter-spacing: -0.21px;
+    transition-duration: 700ms;
+    transition-property: all;
+    cursor: pointer;
+}
+.tags li:hover{
+    color: rgb(222, 222, 222);
+    border: 1px solid rgb(222, 222, 222);
+    transition-duration: 700ms;
+    transition-property: all;
+    cursor: pointer;
 }
 
 .tags li.active {
@@ -74,8 +85,19 @@ body {
 }
 
 .portfolio-item{
-    margin-top: 20px;
-    margin-bottom: -3px;
+    margin-top: 18px;
+    margin-bottom: -1px;
+    opacity: 1;
+    transition-duration: 700ms;
+    transition-property: opacity;
+    cursor: pointer;
+}
+
+.portfolio-item:hover{
+    opacity: 0.5;
+    transition-duration: 700ms;
+    transition-property: opacity;
+    cursor: pointer;
 }
 
 .our-team{
@@ -117,9 +139,21 @@ body {
 .team-item img{
     width: 300px;
     height: 300px;
+    opacity: 1;
+    transition-duration: 700ms;
+    transition-property: opacity;
+    cursor: pointer;
 }
 
-.item-content{
+.team-item img:hover{
+    opacity: 0.5;
+    transition-duration: 700ms;
+    transition-property: opacity;
+    cursor: pointer;
+}
+
+.team-item .item-content{
+    margin-top: 16px;
     min-width: 220px;
 }
 
@@ -142,11 +176,15 @@ body {
 
 .team-item .item-content p{
     font-size: 12px;
-    margin-top: 4px;
+    margin-top: 6px;
 }
 
 h3 {
     font-size: 18px;
+}
+
+.social{
+    margin-top: 22px;
 }
 
 .social-items{
@@ -155,10 +193,22 @@ h3 {
 }
 
 .social-items li{
- list-style: none;
+    list-style: none;
+    margin-right: 8px;
 }
 
 .social img{
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    transition-duration: 700ms;
+    transition-property: opacity;
+    cursor: pointer;
+}
+
+.social img:hover{
+    opacity: 0.5;
+    transition-duration: 700ms;
+    transition-property: opacity;
+    cursor: pointer;
 }
