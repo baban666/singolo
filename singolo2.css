@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.wrapper {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.portfolio{
+    background-color: rgb(45, 48, 58);
+    padding-top: 62px;
+    padding-bottom: 40px;
+}
+
+.portfolio .section-title{
+    margin-bottom: 10px;
+}
+
+.portfolio h2{
+    font-size: 30px;
+    color: rgb(102, 109, 137);
+    text-transform: capitalize;
+    letter-spacing: -0.2px;
+    font-family: 'Lato Black', sans-serif;
+}
+
+.portfolio p{
+    font-size: 18px;
+    color: rgb(118, 126, 158);
+    line-height: 1.6;
+    margin-top: 19px;
+    word-spacing: -1.5px;
+    text-align: justify;
+    font-family: 'Lato Light', sans-serif;
+}
+
+.layout-4-column{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.row{
+    margin-bottom: 31px;
+}
+
+.tags{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.tags li{
+    list-style: none;
+    font-size: 12px;
+    color: rgb(118, 126, 158);
+    border: 1px solid rgb(102, 109, 137);
+    border-radius: 3px;
+    margin-right: 10px;
+    padding: 3px 6px;
+    min-width: 14px;
+}
+
+.tags li.active {
+    color: rgb(222, 222, 222);
+    border: 1px solid rgb(222, 222, 222);
+}
+
+.portfolio-item{
+    margin-top: 20px;
+    margin-bottom: -3px;
+}
+
+.our-team{
+    background-color: rgb(242, 242, 242);
+    padding-top: 62px;
+    padding-bottom: 70px;
+}
+
+.our-team .section-title{
+    margin-bottom: 46px;
+}
+
+.our-team h2{
+    font-size: 30px;
+    color: rgb(102, 109, 137);
+    text-transform: capitalize;
+    letter-spacing: -0.2px;
+    font-family: 'Lato Black', sans-serif;
+}
+
+.our-team p{
+    font-size: 18px;
+    color: rgb(118, 126, 158);
+    line-height: 1.6;
+    margin-top: 19px;
+    word-spacing: -1.5px;
+    text-align: justify;
+    font-family: 'Lato Light', sans-serif;
+}
+
+.our-team .team-item{
+    max-width: 301px;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato Black', sans-serif;
+    color: rgb(118, 126, 158);
+}
+.team-item img{
+    width: 300px;
+    height: 300px;
+}
+
+.item-content{
+    min-width: 220px;
+}
+
+.team-item p {
+    margin-top: 7px;
+    line-height: 22px;
+    text-align: justify;
+    font-family: 'Lato Regular', sans-serif;
+}
+
+.layout-3-column{
+    display: flex;
+    justify-content: space-between;
+}
+
+.row{
+    margin-bottom: 31px;
+}
+
+
+.team-item .item-content p{
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+.social-items{
+    display: flex;
+    justify-content: start;
+}
+
+.social-items li{
+ list-style: none;
+}
+
+.social img{
+    width: 30px;
+    height: 30px;
+}
