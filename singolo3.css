@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.wrapper {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.get-quote{
+    background-color: rgb(240, 108, 100);
+    padding-top: 62px;
+    padding-bottom: 10px;
+}
+
+.get-quote .section-title{
+    margin-bottom: 43px;
+}
+
+.get-quote h2{
+    font-size: 30px;
+    color: rgb(240, 216, 217);
+    letter-spacing: -0.2px;
+    font-family: 'Lato Black', sans-serif;
+}
+
+.get-quote p{
+    font-size: 18px;
+    color: rgb(240, 216, 217);
+    line-height: 1.6;
+    margin-top: 19px;
+    word-spacing: -1.5px;
+    text-align: justify;
+    font-family: 'Lato Light', sans-serif;
+}
+
+.contacts{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form{
+    max-width: 66%;
+    min-width: 66%;
+    margin-right: 20px;
+}
+
+.contact-information{
+    max-width: 34%;
+    letter-spacing: 0.2px;
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+input{
+    min-height: 38px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    background-color: rgb(214, 86, 79);
+    border: none;
+}
+
+textarea{
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: rgb(214, 86, 79);
+    border: none;
+    min-height: 180px;
+}
+
+input[placeholder]  {
+    font-size: 12px;
+    text-align: left;
+    padding-left: 15px;
+    color: #f48c8f;
+    line-height: 1.6;
+    word-spacing: -1.5px;
+    font-family: 'Lato Light', sans-serif;
+    letter-spacing: 0.6px;
+}
+
+
+textarea[placeholder]  {
+    font-size: 12px;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 11px;
+    color: #f48c8f;
+    line-height: 1.6;
+    word-spacing: -1.5px;
+    font-family: 'Lato Light', sans-serif;
+    letter-spacing: 0.6px;
+}
+
+
+footer {
+    background-color: rgb(45, 48, 58);
+}
+
+footer .wrapper{
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-social .social-items{
+    display: flex;
+    justify-content: start;
+}
+
+.footer-social .social-items li{
+    list-style: none;
+    margin-left: 8px;
+}
+
+.footer-social img{
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    transition-duration: 700ms;
+    transition-property: opacity;
+    cursor: pointer;
+}
+
+.footer-social img:hover{
+    opacity: 0.5;
+    transition-duration: 700ms;
+    transition-property: opacity;
+    cursor: pointer;
+}
+
+.contact-information{
+    list-style: none;
+}
+
+.contact-information h4{
+    color: rgb(240, 216, 217);
+    text-align: left;
+    font-size: 18px;
+}
+
+.contact-information p {
+    font-size: 12px;
+    color: rgb(240, 216, 217);
+    line-height: 21.56px;
+    margin-top: 9px;
+    word-spacing: -1.5px;
+    text-align: justify;
+    font-family: 'Lato Light', sans-serif;
+}
+
+.contact-information a {
+    font-size: 12px;
+    color: rgb(240, 216, 217);
+    line-height: 1.797;
+    text-align: left;
+    margin-left: 11px;
+    text-decoration: none;
+}
+
+.ul {
+    margin-top: 20px;
+}
+
+::-webkit-input-placeholder {
+    font-size: 12px;
+    text-align: left;
+    color: #f48c8f;
+    line-height: 1.6;
+    word-spacing: -1.5px;
+    font-family: 'Lato Light', sans-serif;
+}
+::-moz-placeholder{
+    font-size: 12px;
+    text-align: left;
+    color: #f48c8f;
+    line-height: 1.6;
+    word-spacing: -1.5px;
+    font-family: 'Lato Light', sans-serif;
+}/* Firefox 19+ */
+:-moz-placeholder{
+    font-size: 12px;
+    text-align: left;
+    color: #f48c8f;
+    line-height: 1.6;
+    word-spacing: -1.5px;
+    font-family: 'Lato Light', sans-serif;
+}/* Firefox 18- */
+:-ms-input-placeholder{
+    font-size: 12px;
+    text-align: left;
+    color: #f48c8f;
+    line-height: 1.6;
+    word-spacing: -1.5px;
+    font-family: 'Lato Light', sans-serif;
+}
+
+button{
+    background: rgb(240, 216, 217);
+    max-width: 200px;
+    min-height: 50px;
+    border-radius: 5px;
+    border: none;
+    color: rgb(214, 86, 79);
+    transition-duration: 700ms;
+    transition-property: all;
+}
+
+button:hover{
+    background: rgb(214, 86, 79);
+    border: 1px solid rgb(240, 216, 217);
+    color: rgb(240, 216, 217);
+    cursor: pointer;
+    transition-duration: 700ms;
+    transition-property: all;
+}
