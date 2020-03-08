@@ -16,7 +16,8 @@ body {
 .get-quote{
     background-color: rgb(240, 108, 100);
     padding-top: 62px;
-    padding-bottom: 10px;
+    padding-bottom: 3px;
+    border-bottom: 6px solid rgb(234, 103, 107);
 }
 
 .get-quote .section-title{
@@ -117,6 +118,7 @@ footer .wrapper{
 .footer-social .social-items{
     display: flex;
     justify-content: start;
+    padding-top: 5px;
 }
 
 .footer-social .social-items li{
@@ -224,4 +226,10 @@ button:hover{
     cursor: pointer;
     transition-duration: 700ms;
     transition-property: all;
+}
+
+.copyright p {
+    color: #666d89;
+    font-size: 12px;
+    letter-spacing: 0.05px;
 }
