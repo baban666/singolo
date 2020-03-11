@@ -7,6 +7,7 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+
 .wrapper {
     max-width: 940px;
     margin: 0 auto;
@@ -158,11 +159,13 @@ body {
 .our-service{
     background-color: rgb(242, 242, 242);
     padding-top: 62px;
-    padding-bottom: 35px;
+    padding-bottom: 29px;
+    border-bottom: 6px solid rgb(255, 255, 255);
 }
 
 .section-title{
     margin-bottom: 46px;
+    overflow: hidden;
 }
 
 .our-service h2{
@@ -171,6 +174,7 @@ body {
     text-transform: capitalize;
     letter-spacing: -0.2px;
     font-family: 'Lato Black', sans-serif;
+    overflow: hidden;
 }
 
 .our-service p{
@@ -181,6 +185,7 @@ body {
     word-spacing: -1.5px;
     text-align: justify;
     font-family: 'Lato Light', sans-serif;
+    overflow: hidden;
 }
 
 .service-item{
@@ -189,6 +194,7 @@ body {
     display: flex;
     font-family: 'Lato Black', sans-serif;
     color: rgb(118, 126, 158);
+    overflow: hidden;
 }
 .service-item img{
     width: 60px;
@@ -198,6 +204,7 @@ body {
 .item-content{
     min-width: 220px;
     margin: 0 20px;
+    overflow: hidden;
 }
 
 .service-item p {
@@ -205,6 +212,7 @@ body {
     line-height: 22px;
     text-align: justify;
     font-family: 'Lato Regular', sans-serif;
+    overflow: hidden;
 }
 
 .layout-3-column{
@@ -229,7 +237,8 @@ h3 {
 .portfolio{
     background-color: rgb(45, 48, 58);
     padding-top: 62px;
-    padding-bottom: 40px;
+    padding-bottom: 33px;
+    border-bottom: 6px solid rgb(50, 55, 70);
 }
 
 .portfolio .section-title{
@@ -306,6 +315,11 @@ h3 {
     cursor: pointer;
 }
 
+
+.portfolio-item:nth-child(13n){
+    display: none;
+}
+
 .portfolio-item:hover{
     opacity: 0.5;
     transition-duration: 700ms;
@@ -316,7 +330,8 @@ h3 {
 .our-team{
     background-color: rgb(242, 242, 242);
     padding-top: 62px;
-    padding-bottom: 38px;
+    padding-bottom: 33px;
+    border-bottom: 6px solid rgb(255, 255, 255);
 }
 
 .our-team .section-title{
@@ -432,7 +447,7 @@ h3 {
 .get-quote{
     background-color: rgb(240, 108, 100);
     padding-top: 62px;
-    padding-bottom: 3px;
+    padding-bottom: 4px;
     border-bottom: 6px solid rgb(234, 103, 107);
 }
 
@@ -525,7 +540,7 @@ footer {
 }
 
 footer .wrapper{
-    min-height: 75px;
+    min-height: 77px;
     display: flex;
     justify-content: space-between;
     align-items: center;
