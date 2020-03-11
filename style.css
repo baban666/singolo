@@ -316,7 +316,7 @@ h3 {
 }
 
 
-.portfolio-item:nth-child(13n){
+.portfolio-item:nth-child(n+13){
     display: none;
 }
 
