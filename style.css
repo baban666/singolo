@@ -73,7 +73,7 @@ body {
 .navigation li:after{
     content: " ";
     position: absolute;
-    right: -17px;
+    right: 12px;
     top: 48%;
     width: 3px;
     height: 3px;
@@ -316,7 +316,7 @@ h3 {
 }
 
 
-.portfolio-item:nth-child(13n){
+.portfolio-item:nth-child(n+13){
     display: none;
 }
 
