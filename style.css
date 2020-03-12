@@ -6,7 +6,9 @@
 body {
     font-family: 'Lato', sans-serif;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 
 .wrapper {
     max-width: 940px;
@@ -665,3 +667,15 @@ button:hover{
     letter-spacing: 0.05px;
 }
 
+.top{
+    background: red;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 0;
+    bottom: 10%;
+}
+
+.phone-left, .phone-right{
+    cursor: pointer;
+}
