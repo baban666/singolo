@@ -863,6 +863,10 @@ button:hover{
     max-width: calc(50% - 20px);
     z-index: 2147483647;
 }
+.toastify p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 .toastify.on {
     opacity: 1;
