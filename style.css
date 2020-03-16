@@ -115,6 +115,8 @@ html {
     background-color: rgb(240, 108, 100);
     height: 595px;
     border-bottom: 5px solid #ea676b;
+    overflow: hidden;
+    position: relative;
 }
 
 .hero-slider{
@@ -668,12 +670,26 @@ button:hover{
 }
 
 .top{
-    background: red;
-    width: 30px;
-    height: 30px;
+    opacity: 0.5;
     position: fixed;
     right: 0;
     bottom: 10%;
+    background: #767e9e;
+    width: 16px;
+    height: 23px;
+    padding: 10px;
+    transition-duration: 700ms;
+    transition-property: all;
+}
+
+.top:hover{
+    opacity: 0.8;
+    transition-duration: 700ms;
+    transition-property: all;
+}
+
+.top img{
+    transform: rotate(270deg);
 }
 
 .phone-left, .phone-right{
@@ -692,8 +708,8 @@ button:hover{
     overflow: hidden;
 }
 
-
 .item{
+    height: 600px;
     display: none;
     position: relative;
     margin: 0 auto;
@@ -762,6 +778,28 @@ button:hover{
     animation-name: right;
 }
 
+.slider-color{
+    background-color: #648BF0;
+    border-bottom: 5px solid rgba(100, 139, 240, 0.55);
+}
+
+.iphone {
+    position: absolute;
+    left: 25%;
+    top: 7%;
+}
+
+.tag-hide{
+    display: none;
+    transition-duration: 700ms;
+    transition-property: all;
+}
+
+.portfolio-item.active img{
+    outline: 5px solid  #F06C64;
+}
+
+
 @keyframes left {
     from{
         left: 0;
@@ -798,3 +836,87 @@ button:hover{
     }
 
 }
+
+
+
+/*!
+ * Toastify js 1.7.0
+ * https://github.com/apvarun/toastify-js
+ * @license MIT licensed
+ *
+ * Copyright (C) 2018 Varun A P
+ */
+
+.toastify {
+    padding: 12px 20px;
+    color: #ffffff;
+    display: inline-block;
+    box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.12), 0 10px 36px -4px rgba(77, 96, 232, 0.3);
+    background: -webkit-linear-gradient(315deg, #73a5ff, #5477f5);
+    background: linear-gradient(135deg, #73a5ff, #5477f5);
+    position: fixed;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    max-width: calc(50% - 20px);
+    z-index: 2147483647;
+}
+
+.toastify.on {
+    opacity: 1;
+}
+
+.toast-close {
+    opacity: 0.4;
+    padding: 0 5px;
+}
+
+.toastify-right {
+    right: 15px;
+}
+
+.toastify-left {
+    left: 15px;
+}
+
+.toastify-top {
+    top: -150px;
+}
+
+.toastify-bottom {
+    bottom: -150px;
+}
+
+.toastify-rounded {
+    border-radius: 25px;
+}
+
+.toastify-avatar {
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 5px;
+    border-radius: 2px;
+}
+
+.toastify-center {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    max-width: fit-content;
+}
+
+@media only screen and (max-width: 360px) {
+    .toastify-right, .toastify-left {
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        max-width: fit-content;
+    }
+}
+
+
+

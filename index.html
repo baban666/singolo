@@ -26,13 +26,13 @@
 <main>
     <section class="slider">
         <div class="wrapper">
-            <div class="hero-slider item-container">
+            <div class="hero-slider ">
                 <div class="hero-content item active">
                     <img src="./assets/ivertical-1.png" alt="" class="phone-left">
                     <img src="./assets/ihorizontal-3.png" alt="" class="phone-right">
                 </div>
                 <div class="hero-content item">
-                    <img src="./assets/ihorizontal-4.png" alt="" class="phone-right">
+                    <img src="./assets/аrame-3.png" alt="" class="iphone">
                 </div>
                 <div class="hero-navigation">
                     <span><img src="./assets/prev.png" alt="" class="prev"></span>
@@ -220,12 +220,12 @@
             </div>
             <div class="contacts">
                 <div class="contact-form">
-                    <form action="" method="post">
-                        <input type="text" placeholder="Name(required)" required>
-                        <input type="email" placeholder="Email(required)" required>
-                        <input type="text" placeholder="Subject">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Describe your project in detail."></textarea>
-                        <button type="submit">Send request</button>
+                    <form action="" method="get" class="form-validation">
+                        <input type="text" placeholder="Name(required)" name="name" class="field">
+                        <input type="email" id="mail" placeholder="Email(required)" name="email" class="field">
+                        <input type="text" placeholder="Subject" name="subject" class="field">
+                        <textarea name="message" id="" cols="30" rows="10" placeholder="Describe your project in detail." class="field"></textarea>
+                        <button type="submit" class="validate-btn">Send request</button>
                     </form>
                 </div>
                 <div class="contact-information">
@@ -240,7 +240,7 @@
             </div>
         </div>
     </section>
-    <a href="#top" class="top">Top</a>
+    <a href="#top" class="top tag-hide"><img src="./assets/next.png" alt=""></a>
 </main>
 <footer>
     <div class="wrapper">
@@ -259,4 +259,5 @@
 </footer>
 </body>
 <script src="./script.js"></script>
+<script src="./assets/js/toastify.js"></script>
 </html>
