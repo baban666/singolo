@@ -5,10 +5,13 @@
 
 body {
     font-family: 'Lato', sans-serif;
+    scroll-padding-top: 70px; /* height of sticky header */
 }
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* height of sticky header */
 }
+
 
 .wrapper {
     max-width: 940px;
@@ -21,6 +24,9 @@ html {
     background-color: rgb(45, 48, 58);
     height: 90px;
     border-bottom: 6px solid #323746;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 
 .header .wrapper{
@@ -109,6 +115,10 @@ html {
 
 .navigation .active a {
     color: rgb(240, 108, 100);
+}
+
+main{
+    padding-top: 96px;
 }
 
 .slider{
@@ -921,6 +931,4 @@ button:hover{
         max-width: fit-content;
     }
 }
-
-
 

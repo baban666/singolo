@@ -1,7 +1,8 @@
 window.onload = function() {
    let menuLinks = document.querySelectorAll('.nav-item');
-  // let idSections = document.querySelectorAll('*[id]');
-    if(!window.location.hash || window.location.hash === '#top' ) {
+   let idSections = document.querySelectorAll('section[id], body[id]');
+
+    if(!window.location.hash || window.location.hash === '#top-body' ) {
         menuLinks[0].classList.add('active')
     }
 
@@ -11,21 +12,50 @@ window.onload = function() {
              elem.classList.remove(className)
             }
         })
-    }
+    };
 
    menuLinks.forEach(item => {
        item.addEventListener('click', function (e) {
            if(this.classList.contains('active')){
                return false;
            }else {
-               removeClass(menuLinks, 'active')
+               removeClass(menuLinks, 'active');
                this.classList.add('active');
            }
 
        })
    });
 
-   let phoneHorizontal = document.querySelector('.phone-right')
+
+    document.addEventListener('scroll', function () {
+        let currentPosition = window.scrollY;
+        if(window.scrollY >= 100){
+            document.querySelector('.top').classList.remove('tag-hide')
+
+        }else {
+            document.querySelector('.top').classList.add('tag-hide')
+        }
+
+        idSections.forEach((elem) => {
+
+            if(elem.offsetTop <= currentPosition && (elem.offsetTop + elem.offsetHeight) > currentPosition){
+                menuLinks.forEach(item => {
+
+                        if(item.childNodes[0].getAttribute('href').substring(1) == elem.getAttribute('id')){
+                            removeClass(menuLinks, 'active');
+                            item.classList.add('active');
+                            currentPosition += 200
+                        }
+
+                });
+            }
+        })
+
+    });
+
+
+
+   let phoneHorizontal = document.querySelector('.phone-right');
     phoneHorizontal.addEventListener('click', function () {
        if(phoneHorizontal.attributes.src.value == './assets/ihorizontal-3.png'){
            phoneHorizontal.setAttribute('src', './assets/ihorizontal-4.png')
@@ -34,7 +64,7 @@ window.onload = function() {
        }
    });
 
-   let phoneVertical = document.querySelector('.phone-left')
+   let phoneVertical = document.querySelector('.phone-left');
     phoneVertical.addEventListener('click', function () {
        if(phoneVertical.attributes.src.value == './assets/ivertical-1.png'){
            phoneVertical.setAttribute('src', './assets/ivertical-2.png')
@@ -49,23 +79,23 @@ window.onload = function() {
     let items = document.querySelectorAll('.item');
     let currentItem = 0;
     let isEnabled = true;
-    
+
     function changeCurrentItem(n) {
         currentItem = (n + items.length) % items.length;
     }
 
     function hideItem(direction) {
         isEnabled = false;
-        items[currentItem].classList.add(direction)
+        items[currentItem].classList.add(direction);
         items[currentItem].addEventListener('animationend', function () {
             this.classList.remove('active', direction)
         })
     }
     function showItem(direction) {
-        items[currentItem].classList.add('next-item', direction)
+        items[currentItem].classList.add('next-item', direction);
         items[currentItem].addEventListener('animationend', function () {
-            this.classList.remove('next-item', direction)
-            this.classList.add('active')
+            this.classList.remove('next-item', direction);
+            this.classList.add('active');
             isEnabled = true;
         })
     }
@@ -76,8 +106,8 @@ window.onload = function() {
         }else {
             document.querySelector('.slider').classList.remove('slider-color')
         }
-        hideItem('to-right')
-        changeCurrentItem(n - 1)
+        hideItem('to-right');
+        changeCurrentItem(n - 1);
         showItem('from-left')
 
     }
@@ -87,8 +117,8 @@ window.onload = function() {
         }else {
             document.querySelector('.slider').classList.remove('slider-color')
         }
-        hideItem('to-left')
-        changeCurrentItem(n + 1)
+        hideItem('to-left');
+        changeCurrentItem(n + 1);
         showItem('from-right')
 
     }
@@ -108,20 +138,28 @@ window.onload = function() {
 // tags sort for portfolio
 
 
-    let tags = document.querySelectorAll('.tags li')
-    let portfolioItems = document.querySelectorAll('.portfolio-item')
+    let tags = document.querySelectorAll('.tags li');
+    let portfolioItems = document.querySelectorAll('.portfolio-item');
+    let portfolioItemsList = document.querySelector('.layout-4-column');
+
 
     const sortPortfolio = (num) => {
-        portfolioItems.forEach((item, i) => {
-            ((portfolioItems.length + i) % (num + 1) === 0) ? item.classList.add('tag-hide') : false;
-        });
+        let portfolioItems = document.querySelectorAll('.portfolio-item');
+        let count = (portfolioItems.length - 1) - num;
+
+        portfolioItems.forEach(()=> {
+            portfolioItemsList.appendChild(portfolioItems[(count >= 0) ? count-- : count = portfolioItems.length - num]);
+            removeClass(portfolioItems, 'active')
+       })
+
     };
 
     const sortDefaultPortfolio = () => {
-        portfolioItems.forEach((item) => {
-            item.classList.remove('tag-hide')
+        portfolioItems.forEach((item, i)=> {
+            portfolioItemsList.appendChild(portfolioItems[i]);
+            removeClass(portfolioItems, 'active')
         })
-    }
+    };
 
 
     tags.forEach((item, i) => {
@@ -131,13 +169,13 @@ window.onload = function() {
                     sortDefaultPortfolio()
                     sortPortfolio(i)
                 }else {
-                    removeClass(tags, 'active')
+                    removeClass(tags, 'active');
                     this.classList.add('active');
                     sortDefaultPortfolio()
                     sortPortfolio(i)
                 }
             }else {
-                removeClass(tags, 'active')
+                removeClass(tags, 'active');
                 this.classList.add('active');
                 sortDefaultPortfolio()
             }
@@ -151,7 +189,7 @@ window.onload = function() {
             if(this.classList.contains('active')){
                 return false;
             }else {
-                removeClass(portfolioItems, 'active')
+                removeClass(portfolioItems, 'active');
                 this.classList.add('active');
             }
 
@@ -171,8 +209,6 @@ window.onload = function() {
 
         if(!fields[0].value || !fields[1].value){
             let validateToast = Toastify({
-                // On-click destination
-                destination: null,
                 text: `<p>Fields "Name" and "Email" Cant be blank</p>`,
                 // Show toast close icon
                 close: true,
@@ -182,17 +218,19 @@ window.onload = function() {
                 position: 'right',
                 // Background color
                 backgroundColor: "linear-gradient(135deg, #73a5ff, #5477f5)",
-            })
+                callback: function () {
+                    form.reset()
+                },
+            });
 
             validateToast.showToast();
         }else {
-            text = `<p>The letter was sent</p>`
-            text += (fields[2].value) ? `<p>Subject: ${fields[2].value}</p>` : `<p>Without subject </p>`
-            text += (fields[3].value) ? `<p>Description: ${fields[3].value}</p>` : `<p>Without description </p>`
+            text = `<p>The letter was sent</p>`;
+            text += (fields[2].value) ? `<p>Subject: ${fields[2].value}</p>` : `<p>Without subject </p>`;
+            text += (fields[3].value) ? `<p>Description: ${fields[3].value}</p>` : `<p>Without description </p>`;
 
             let sendToast = Toastify({
-                // On-click destination
-                destination: null,
+
                 text: text,
                 // Show toast close icon
                 close: true,
@@ -202,7 +240,11 @@ window.onload = function() {
                 position: 'right',
                 // Background color
                 backgroundColor: "linear-gradient(135deg, #83D63A, #7BF80D)",
-            })
+                callback: function () {
+                    form.reset()
+                },
+
+            });
 
             sendToast.showToast()
         }
@@ -210,14 +252,6 @@ window.onload = function() {
     })
 
 
-    window.addEventListener('scroll', function () {
-        if(window.scrollY >= 100){
-            document.querySelector('.top').classList.remove('tag-hide')
-
-        }else {
-            document.querySelector('.top').classList.add('tag-hide')
-        }
-    })
 
 };
 
