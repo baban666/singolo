@@ -203,12 +203,13 @@ main{
 }
 
 .service-item{
-    max-width: 301px;
-    min-width: 280px;
+    max-width: 30%;
+    min-width: 30%;
     display: flex;
     font-family: 'Lato Black', sans-serif;
     color: rgb(118, 126, 158);
     overflow: hidden;
+    margin-bottom: 30px;
 }
 .service-item img{
     width: 60px;
@@ -232,6 +233,7 @@ main{
 .layout-3-column{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .row{
@@ -654,20 +656,20 @@ footer .wrapper{
 }
 
 button{
-    background: rgb(240, 216, 217);
+    background: #FBC65F;
     max-width: 200px;
     min-height: 50px;
     border-radius: 5px;
     border: none;
-    color: rgb(214, 86, 79);
+    color: #886A30;
     transition-duration: 700ms;
     transition-property: all;
 }
 
 button:hover{
     background: rgb(214, 86, 79);
-    border: 1px solid rgb(240, 216, 217);
-    color: rgb(240, 216, 217);
+    border: #FBC65F;
+    color: #FBC65F;
     cursor: pointer;
     transition-duration: 700ms;
     transition-property: all;
@@ -931,4 +933,64 @@ button:hover{
         max-width: fit-content;
     }
 }
+
+
+/*1020px <= width*/
+/*768px <= width < 1020px*/
+/*375px <= width < 768px*/
+/*width < 375px*/
+
+
+
+@media (max-width: 768px) {
+    .header {
+        background-color: red;
+    }
+
+    .hero-content .phone-left {
+        left: 55px;
+        top: 53px;
+        width: 180px;
+    }
+
+    .hero-content .phone-right {
+        width: 363px;
+        right: 50px;
+    }
+
+    .iphone {
+        height: 363px;
+    }
+
+    .our-service {
+       padding-bottom: 0;
+    }
+
+    .service-item{
+        max-width: 45%;
+        min-width: 45%;
+        margin-bottom: 30px;
+    }
+
+    .our-team .team-item {
+        max-width: 32%;
+        min-width: 32%;
+    }
+
+    .team-item img {
+        height: 218px;
+        width: auto;
+
+    }
+
+}
+
+@media (max-width: 375px) {
+    .header {
+        background-color: greenyellow;
+    }
+}
+
+
+
 
