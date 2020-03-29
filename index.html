@@ -2,34 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Singolo</title>
     <link rel="stylesheet" href="./fonts.css">
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-<header class="header">
-    <div class="wrapper">
-        <div class="logo">
-            <a href="#"><h1>Singolo</h1><span>*</span></a>
+<body id="top-body">
+<header id="top" class="header">
+    <div class="mobile-menu">
+        <div class="mobile-top">
+            <div class="mobile-burger-menu">
+                <img src="./assets/burger-menu-icon.svg" class="burger-object">
+            </div>
+            <div class="mobile-logo">
+                <a href="#"><h2>Singolo</h2><span>*</span></a>
+            </div>
         </div>
-        <nav class="nav-bar">
-            <ul class="navigation">
-                <li class="nav-item active"><a href="">Home</a></li>
-                <li class="nav-item"><a href="">Services</a></li>
-                <li class="nav-item"><a href="">Portfolio</a></li>
-                <li class="nav-item"><a href="">About</a></li>
-                <li class="nav-item"><a href="">Contact</a></li>
-            </ul>
-        </nav>
+    </div>
+    <div class="overlay"></div>
+    <div class="top-navigation">
+        <div class="wrapper">
+            <div class="burger-menu">
+                <img src="./assets/burger-menu-icon.svg" class="burger-object">
+            </div>
+            <div class="logo">
+                <a href="#"><h1>Singolo</h1><span>*</span></a>
+            </div>
+            <nav class="nav-bar">
+                <ul class="navigation">
+                    <li class="nav-item active"><a href="#top-body">Home</a></li>
+                    <li class="nav-item"><a href="#service">Services</a></li>
+                    <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a href="#team">About</a></li>
+                    <li class="nav-item"><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </header>
 <main>
     <section class="slider">
         <div class="wrapper">
-            <div class="hero-slider">
-                <div class="hero-content">
-                    <img src="./assets/phone_left.png" alt="" class="phone-left">
-                    <img src="./assets/phone_right.png" alt="" class="phone-right">
+            <div class="hero-slider ">
+                <div class="hero-content item active">
+                    <img src="./assets/ivertical-1.png" alt="" class="phone-left">
+                    <img src="./assets/ihorizontal-3.png" alt="" class="phone-right">
+                </div>
+                <div class="hero-content item">
+                    <img src="./assets/аrame-3.png" alt="" class="iphone">
                 </div>
                 <div class="hero-navigation">
                     <span><img src="./assets/prev.png" alt="" class="prev"></span>
@@ -38,7 +58,7 @@
             </div>
         </div>
     </section>
-    <section class="our-service">
+    <section id="service" class="our-service">
         <div class="wrapper">
             <div class="section-title">
                 <h2>Our services</h2>
@@ -67,10 +87,6 @@
                             <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum</p>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="layout-3-column">
                     <div class="service-item">
                         <img src="./assets/ellipse-4.png" alt="">
                         <div class="item-content">
@@ -96,7 +112,7 @@
             </div>
         </div>
     </section>
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <div class="wrapper">
             <div class="section-title">
                 <h2>Portfolio</h2>
@@ -152,7 +168,7 @@
             </div>
         </div>
     </section>
-    <section class="our-team">
+    <section id="team" class="our-team">
         <div class="wrapper">
             <div class="section-title">
                 <h2>About Us</h2>
@@ -209,7 +225,7 @@
             </div>
         </div>
     </section>
-    <section class="get-quote">
+    <section id="contact" class="get-quote">
         <div class="wrapper">
             <div class="section-title">
                 <h2>Get a Quote</h2>
@@ -217,12 +233,12 @@
             </div>
             <div class="contacts">
                 <div class="contact-form">
-                    <form action="" method="post">
-                        <input type="text" placeholder="Name(required)" required>
-                        <input type="email" placeholder="Email(required)" required>
-                        <input type="text" placeholder="Subject">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Describe your project in detail."></textarea>
-                        <button type="submit">Send request</button>
+                    <form action="" method="get" class="form-validation">
+                        <input type="text" placeholder="Name(required)" name="name" class="field">
+                        <input type="email" id="mail" placeholder="Email(required)" name="email" class="field">
+                        <input type="text" placeholder="Subject" name="subject" class="field">
+                        <textarea name="message" id="" cols="30" rows="10" placeholder="Describe your project in detail." class="field"></textarea>
+                        <button type="submit" class="validate-btn">Send request</button>
                     </form>
                 </div>
                 <div class="contact-information">
@@ -237,6 +253,7 @@
             </div>
         </div>
     </section>
+    <a href="#top-body" class="top tag-hide"><img src="./assets/next.png" alt=""></a>
 </main>
 <footer>
     <div class="wrapper">
@@ -254,4 +271,6 @@
     </div>
 </footer>
 </body>
+<script src="./script.js"></script>
+<script src="./assets/js/toastify.js"></script>
 </html>
